@@ -1,0 +1,8 @@
+prefix=/home/longfei/catkin_ws/install
+
+Name: robotiq_force_torque_sensor
+Description: Description of robotiq_force_torque_sensor
+Version: 1.0.0
+Cflags: -I/home/longfei/catkin_ws/install/include
+Libs: -L/home/longfei/catkin_ws/install/lib 
+Requires: message_runtime

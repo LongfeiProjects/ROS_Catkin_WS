@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "robotiq_c_model_control")
+set(robotiq_c_model_control_MAINTAINER "Shaun Edwards <sedwards@swri.org>")
+set(robotiq_c_model_control_DEPRECATED "")
+set(robotiq_c_model_control_VERSION "1.0.0")
+set(robotiq_c_model_control_BUILD_DEPENDS "rospy" "roscpp" "robotiq_ethercat" "message_generation")
+set(robotiq_c_model_control_RUN_DEPENDS "rospy" "message_runtime" "roscpp" "robotiq_ethercat")
+set(robotiq_c_model_control_BUILDTOOL_DEPENDS "catkin")

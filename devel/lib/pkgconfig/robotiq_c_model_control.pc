@@ -1,0 +1,8 @@
+prefix=/home/longfei/catkin_ws/devel
+
+Name: robotiq_c_model_control
+Description: Description of robotiq_c_model_control
+Version: 1.0.0
+Cflags: -I/home/longfei/catkin_ws/devel/include -I/home/longfei/catkin_ws/src/robotiq-hydro-devel/robotiq_c_model_control/include
+Libs: -L/home/longfei/catkin_ws/devel/lib 
+Requires: rospy message_runtime roscpp robotiq_ethercat

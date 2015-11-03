@@ -1,0 +1,1 @@
+/usr/bin/gcc      CMakeFiles/red_test.dir/scripts/red_test.c.o  -o /home/longfei/catkin_ws/devel/lib/ethercat_soem/red_test -rdynamic /home/longfei/catkin_ws/devel/lib/libethercat_soem.so -lpthread -lrt -Wl,-rpath,/home/longfei/catkin_ws/devel/lib 

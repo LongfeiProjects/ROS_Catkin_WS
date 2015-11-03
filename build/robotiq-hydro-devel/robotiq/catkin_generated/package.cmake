@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "robotiq")
+set(robotiq_MAINTAINER "Shaun Edwards <sedwards@swri.org>")
+set(robotiq_DEPRECATED "")
+set(robotiq_VERSION "1.0.0")
+set(robotiq_BUILD_DEPENDS )
+set(robotiq_RUN_DEPENDS "robotiq_s_model_visualization" "robotiq_modbus_tcp" "robotiq_s_model_control" "robotiq_c_model_control" "robotiq_force_torque_sensor")
+set(robotiq_BUILDTOOL_DEPENDS "catkin")

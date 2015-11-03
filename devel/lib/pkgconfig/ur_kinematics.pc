@@ -1,0 +1,8 @@
+prefix=/home/longfei/catkin_ws/devel
+
+Name: ur_kinematics
+Description: Description of ur_kinematics
+Version: 1.1.5
+Cflags: -I/home/longfei/catkin_ws/src/universal_robot/ur_kinematics/include
+Libs: -L/home/longfei/catkin_ws/devel/lib -lur10_kin -lur5_kin -lur10_moveit_plugin -lur5_moveit_plugin
+Requires: roscpp geometry_msgs moveit_core moveit_ros_planning pluginlib tf_conversions

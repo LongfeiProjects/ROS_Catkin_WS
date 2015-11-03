@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "robotiq_c2_model_visualization")
+set(robotiq_c2_model_visualization_MAINTAINER "Jonathan Meyer <jonathan.meyer@swri.org>")
+set(robotiq_c2_model_visualization_DEPRECATED "")
+set(robotiq_c2_model_visualization_VERSION "1.0.0")
+set(robotiq_c2_model_visualization_BUILD_DEPENDS )
+set(robotiq_c2_model_visualization_RUN_DEPENDS "xacro")
+set(robotiq_c2_model_visualization_BUILDTOOL_DEPENDS "catkin")

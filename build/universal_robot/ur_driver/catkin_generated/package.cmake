@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "ur_driver")
+set(ur_driver_MAINTAINER "Alexander Bubeck <aub@ipa.fhg.de>")
+set(ur_driver_DEPRECATED "")
+set(ur_driver_VERSION "1.1.5")
+set(ur_driver_BUILD_DEPENDS "dynamic_reconfigure" "roscpp" "message_generation" "ur_msgs")
+set(ur_driver_RUN_DEPENDS "rospy" "roscpp" "actionlib" "control_msgs" "sensor_msgs" "trajectory_msgs" "ur_msgs" "python-lxml" "dynamic_reconfigure" "message_runtime")
+set(ur_driver_BUILDTOOL_DEPENDS "catkin")

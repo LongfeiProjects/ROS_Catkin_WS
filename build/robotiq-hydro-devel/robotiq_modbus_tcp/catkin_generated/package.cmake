@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "robotiq_modbus_tcp")
+set(robotiq_modbus_tcp_MAINTAINER "Shaun Edwards <sedwards@swri.org>")
+set(robotiq_modbus_tcp_DEPRECATED "")
+set(robotiq_modbus_tcp_VERSION "1.0.0")
+set(robotiq_modbus_tcp_BUILD_DEPENDS "python-pymodbus" "rospy")
+set(robotiq_modbus_tcp_RUN_DEPENDS "python-pymodbus" "rospy")
+set(robotiq_modbus_tcp_BUILDTOOL_DEPENDS "catkin")

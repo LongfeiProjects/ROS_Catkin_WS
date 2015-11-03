@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "ethercat_soem")
+set(ethercat_soem_MAINTAINER "Kelsey Hawkins <kphawkins@gatech.edu>")
+set(ethercat_soem_DEPRECATED "")
+set(ethercat_soem_VERSION "0.0.0")
+set(ethercat_soem_BUILD_DEPENDS )
+set(ethercat_soem_RUN_DEPENDS )
+set(ethercat_soem_BUILDTOOL_DEPENDS "catkin")

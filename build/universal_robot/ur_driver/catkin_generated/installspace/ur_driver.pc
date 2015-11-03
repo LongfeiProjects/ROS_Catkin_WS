@@ -1,0 +1,8 @@
+prefix=/home/longfei/catkin_ws/install
+
+Name: ur_driver
+Description: Description of ur_driver
+Version: 1.1.5
+Cflags: -I/home/longfei/catkin_ws/install/include
+Libs: -L/home/longfei/catkin_ws/install/lib -lroboticArm
+Requires: message_runtime
