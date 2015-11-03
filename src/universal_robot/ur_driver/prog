@@ -1,0 +1,588 @@
+def driverProg():
+  HOSTNAME = "%(driver_hostname)s"
+  PORT = %(driver_reverseport)d
+  MSG_OUT = 1
+  MSG_QUIT = 2
+  MSG_JOINT_STATES = 3
+  MSG_MOVEJ = 4
+  MSG_WAYPOINT_FINISHED = 5
+  MSG_STOPJ = 6
+  MSG_SERVOJ = 7
+  MSG_SET_PAYLOAD = 8
+  MSG_WRENCH = 9
+  MSG_SET_DIGITAL_OUT = 10
+  MSG_GET_IO = 11
+  MSG_SET_FLAG = 12
+  MSG_SET_TOOL_VOLTAGE = 13
+  MSG_SET_ANALOG_OUT = 14
+  MSG_MOVEL = 15
+  MSG_GRIPPER_ACT = 50
+  MSG_GRIPPER_MOVE = 51
+  MSG_GRIPPER_MOVE_FINISHED = 52
+  MSG_GRIPPER_OBJ_DETECTED = 53
+  MSG_GRIPPER_MOVE_COMPENSATION = 54
+##############################
+ # MSG_GET_TORQUES = 55       
+#############################
+  MULT_wrench = 10000.0
+  MULT_payload = 1000.0
+  MULT_jointstate = 10000.0
+  MULT_time = 1000000.0
+  MULT_blend = 1000.0
+  MULT_analog = 1000000.0
+  pi = 3.14159265359
+
+#################################################
+#  def rq_get_torques():
+#      trq = get_joint_torques()
+#      send_joint_torques(trq)
+#  end
+
+#  def send_joint_torques(torques_j):
+#      enter_critical
+#      socket_send_int(MSG_GET_TORQUES)
+#      socket_send_int(torques_j)
+#      exit_critical
+#  end
+################################################
+  def send_out(msg):
+    enter_critical
+    socket_send_int(MSG_OUT)
+    socket_send_string(msg)
+    socket_send_string("~")
+    exit_critical
+  end
+
+  def send_waypoint_finished(waypoint_id):
+    enter_critical
+    socket_send_int(MSG_WAYPOINT_FINISHED)
+    socket_send_int(waypoint_id)
+    exit_critical
+  end
+
+  ACT = 1
+  GTO = 2
+  ATR = 3
+  ARD = 4
+  FOR = 5
+  SPE = 6
+  OBJ = 7
+  STA = 8
+  FLT = 9
+  POS = 10
+  PRE = 11
+
+  def rq_init_connection(gripper_sid=9, gripper_socket="gripper_socket"):
+  	socket_open("127.0.0.1",63352, gripper_socket)
+  	socket_set_var("SID", gripper_sid,  gripper_socket)
+  	ack = socket_read_byte_list(3, gripper_socket)
+  end
+
+  def rq_activate(gripper_socket="gripper_socket"):
+  	rq_gripper_act = 0
+  	rq_set_var(ACT,1, gripper_socket)
+  end
+  
+  def rq_activate_and_wait(gripper_socket="gripper_socket"):
+  	rq_activate(gripper_socket)
+  
+  	while(not rq_is_gripper_activated(gripper_socket)):
+  		# wait for activation completed
+  	end
+  end
+
+  def rq_is_gripper_activated(gripper_socket="gripper_socket"):
+  	gSTA = rq_get_var(STA, 1, gripper_socket)
+  
+  	if(is_STA_gripper_activated(gSTA)):
+  		return True
+  	else:
+  		return False
+  	end
+  end
+
+  def is_STA_gripper_activated (list_of_bytes):
+  
+  	# list length is not 1
+  	if (list_of_bytes[0] != 1):
+  		return False
+  	end
+  
+  	# byte is '3'?
+  	if (list_of_bytes[1] == 51):
+  		return True
+  	end
+  
+  	return False
+  end
+
+  def rq_open_and_wait(gripper_socket="gripper_socket"):
+  	rq_move_and_wait(0, gripper_socket)
+  end
+  
+  def rq_close_and_wait(gripper_socket="gripper_socket"):
+  	rq_move_and_wait(255, gripper_socket)
+  end
+
+  def rq_move(pos, gripper_socket="gripper_socket"):
+  	rq_set_pos(pos, gripper_socket)
+  	rq_go_to(gripper_socket)
+  end
+
+  def rq_move_and_wait(pos, gripper_socket="gripper_socket"):
+  	rq_move(pos, gripper_socket)
+  
+  	while (not rq_is_motion_complete(gripper_socket)):
+  		# wait for motion completed
+  		sleep(0.01)
+  		sync()
+  	end
+  end
+
+  def rq_go_to(gripper_socket="gripper_socket"):
+  	rq_set_var(GTO,1, gripper_socket)
+  end
+
+  # reset the rGTO to prevent movement and
+  # set the position
+  def rq_set_pos(pos, gripper_socket="gripper_socket"):
+  	rq_set_var(GTO,0, gripper_socket)
+  
+  	rq_set_var(POS,pos, gripper_socket)
+  	
+  	gPRE = rq_get_var(PRE, 3, gripper_socket)
+  	pre = (gPRE[1] - 48)*100 + (gPRE[2] -48)*10 + gPRE[3] - 48
+  	sync()
+  	while (pre != pos):
+  		gPRE = rq_get_var(PRE, 3, gripper_socket)
+  		pre = (gPRE[1] - 48)*100 + (gPRE[2] -48)*10 + gPRE[3] - 48
+  		sync()
+  	end
+  end
+
+  def rq_is_motion_complete(gripper_socket="gripper_socket"):
+  	gOBJ = rq_get_var(OBJ, 1, gripper_socket)
+  	sleep(0.01)
+  
+  	if (is_OBJ_gripper_at_position(gOBJ)):
+  		return True
+  	end
+  
+  	if (is_OBJ_object_detected(gOBJ)):
+  		return True
+  	end
+  
+  	return False
+  
+  end
+
+  def rq_is_object_detected(gripper_socket="gripper_socket"):
+  	gOBJ = rq_get_var(OBJ, 1, gripper_socket)
+  
+  	if(is_OBJ_object_detected(gOBJ)):
+  		return True
+  	else:
+  		return False
+  	end
+  end
+
+  # Returns True if list_of_byte is [1, '3']
+  # Used to test OBJ = 0x3
+  def is_OBJ_gripper_at_position (list_of_bytes):
+  
+  	# list length is not 1
+  	if (list_of_bytes[0] != 1):
+  		return False
+  	end
+  
+  	# byte is '3'?
+  	if (list_of_bytes[1] == 51):
+  		return True
+  	end
+  	
+  	return False
+  end
+
+  # Returns True if list_of_byte is [1, '1'] or [1, '2']
+  # Used to test OBJ = 0x1 or OBJ = 0x2
+  def is_OBJ_object_detected (list_of_bytes):
+  	
+  	# list length is not 1
+  	if (list_of_bytes[0] != 1):
+  		return False
+  	end
+  
+  	# byte is '2'?
+  	if (list_of_bytes[1] == 50):
+  		return True
+  	end
+  
+  	# byte is '1'?
+  	if (list_of_bytes[1]  == 49):
+  		return True
+  	end
+  
+  	return False
+  	
+  end
+  def rq_set_var(var_name, var_value, gripper_socket="gripper_socket"):
+  	
+  	sync()
+  	if (var_name == ACT):
+  		socket_set_var("ACT", var_value, gripper_socket)
+  	elif (var_name == GTO):
+  		socket_set_var("GTO", var_value, gripper_socket)
+  	elif (var_name == ATR):
+  		socket_set_var("ATR", var_value, gripper_socket)
+  	elif (var_name == ARD):
+  		socket_set_var("ARD", var_value, gripper_socket)
+  	elif (var_name == FOR):
+  		socket_set_var("FOR", var_value, gripper_socket)
+  	elif (var_name == SPE):
+  		socket_set_var("SPE", var_value, gripper_socket)
+  	elif (var_name == POS):
+  		socket_set_var("POS", var_value, gripper_socket)
+  	else:
+  	end
+  
+  	sync()
+  	ack = socket_read_byte_list(3, gripper_socket)
+  	sync()
+  
+  	while(is_not_ack(ack)):
+  
+  		textmsg("rq_set_var : retry", " ...")
+  		textmsg("rq_set_var : var_name = ", var_name)
+  		textmsg("rq_set_var : var_value = ", var_value)
+  
+  		if (ack[0] != 0):
+  			textmsg("rq_set_var : invalid ack value = ", ack)
+  		end
+  
+  		socket_set_var(var_name , var_value,gripper_socket)
+  		sync()
+  		ack = socket_read_byte_list(3, gripper_socket)
+  		sync()
+  	end
+  end
+  
+  def rq_get_var(var_name, nbr_bytes, gripper_socket="gripper_socket"):
+  	
+  	if (var_name == FLT): 
+  		socket_send_string("GET FLT",gripper_socket)
+  		sync()
+  	elif (var_name == OBJ):
+  		socket_send_string("GET OBJ",gripper_socket)
+  		sync()
+  	elif (var_name == STA):
+  		socket_send_string("GET STA",gripper_socket)
+  		sync()
+  	elif (var_name == PRE):
+  		socket_send_string("GET PRE",gripper_socket)
+  		sync()
+  	else:
+  	end
+  	
+  	var_value = socket_read_byte_list(nbr_bytes, gripper_socket)
+  	sync()
+  
+  	return var_value
+  end
+
+  # Returns True if list_of_bytes is [3, 'a', 'c', 'k']
+  def is_ack(list_of_bytes):
+  	
+  	# list length is not 3
+  	if (list_of_bytes[0] != 3):
+  		return False
+  	end
+  
+  	# first byte not is 'a'?
+  	if (list_of_bytes[1] != 97):
+  		return False
+  	end
+  	
+  	# first byte not is 'c'?
+  	if (list_of_bytes[2] != 99):
+  		return False
+  	end
+  	
+  	# first byte not is 'k'?
+  	if (list_of_bytes[3] != 107):
+  		return False
+  	end
+  	
+  	return True
+  end
+  
+  # Returns True if list_of_bytes is not [3, 'a', 'c', 'k']
+  def is_not_ack(list_of_bytes):
+  	if (is_ack(list_of_bytes)):
+  		return False
+  	else:
+  		return True
+  	end
+  end
+
+  def rq_set_force(force, gripper_socket="gripper_socket"):
+  	rq_set_var(FOR,force, gripper_socket)
+  end
+  
+  def rq_set_speed(speed, gripper_socket="gripper_socket"):
+  	rq_set_var(SPE,speed, gripper_socket)
+  end
+
+  SERVO_IDLE = 0
+  SERVO_RUNNING = 1
+  cmd_servo_state = SERVO_IDLE
+  cmd_servo_id = 0  # 0 = idle, -1 = stop
+  cmd_servo_q = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  cmd_servo_dt = 0.0
+  def set_servo_setpoint(id, q, dt):
+    enter_critical
+    cmd_servo_state = SERVO_RUNNING
+    cmd_servo_id = id
+    cmd_servo_q = q
+    cmd_servo_dt = dt
+    exit_critical
+  end
+  thread servoThread():
+    state = SERVO_IDLE
+    while True:
+      # Latches the new command
+      enter_critical
+      q = cmd_servo_q
+      dt = cmd_servo_dt
+      id = cmd_servo_id
+      do_brake = False
+      if (state == SERVO_RUNNING) and (cmd_servo_state == SERVO_IDLE):
+        # No command pending
+        do_brake = True
+      end
+      state = cmd_servo_state
+      cmd_servo_state = SERVO_IDLE
+      exit_critical
+
+      #do_brake = False
+
+      # Executes the command
+      if do_brake:
+        stopj(1.0)  # TODO
+        send_out("Braking")
+        sync()
+      elif state == SERVO_RUNNING:
+        servoj(q, 0, 0, dt)
+        #send_out("Servoed")
+      else:
+        #send_out("Idle")
+        sync()
+      end
+    end
+  end
+
+  socket_open(HOSTNAME, PORT)
+  send_out("hello")
+
+  thread_servo = run servoThread()
+
+  # Servoes in a circle
+  #movej([1.5,-0.4,-1.57,0,0,0], 3, 0.75, 1.0)
+  #t = 0
+  #while True:
+  #  q = [1.5,0,-1.57,0,0,0]
+  #  q[0] = q[0] + 0.2 * sin(0.25 * t*(2*pi))
+  #  q[1] = q[1] - 0.2 + 0.2 * cos(0.25 * t*(2*pi))
+  #  #servoj(q, 3, 1, 0.08)
+  #  #send_out("servoed")
+  #  set_servo_setpoint(t, q, 0.08)
+  #  t = t + 0.08
+  #  sleep(0.08)
+  #end
+
+  while True:
+    #send_out("Listening")
+    ll = socket_read_binary_integer(1)
+
+    if ll[0] == 0:
+      #send_out("Received nothing")
+    elif ll[0] > 1:
+      send_out("Received too many things")
+    else:
+      mtype = ll[1]
+      if mtype == MSG_QUIT:
+        send_out("Received QUIT")
+        break
+      elif mtype == MSG_MOVEJ:
+        send_out("Received movej")
+        params_movej = socket_read_binary_integer(1+6+4)
+        if params_movej[0] == 0:
+          send_out("Received no parameters for movej message")
+        end
+
+        # Unpacks the parameters
+        waypoint_id = params_movej[1]
+        q = [params_movej[2] / MULT_jointstate,
+                   params_movej[3] / MULT_jointstate,
+                   params_movej[4] / MULT_jointstate,
+                   params_movej[5] / MULT_jointstate,
+                   params_movej[6] / MULT_jointstate,
+                   params_movej[7] / MULT_jointstate]
+        a = params_movej[8] / MULT_jointstate
+        v = params_movej[9] / MULT_jointstate
+        t = params_movej[10] / MULT_time
+        r = params_movej[11] / MULT_blend
+
+        # Sends the command
+        send_out("movej started")
+        movej(q, a, v, t, r)
+        send_waypoint_finished(waypoint_id)
+        send_out("movej finished")
+      elif mtype == MSG_SERVOJ:
+        # Reads the parameters
+        params_servoj = socket_read_binary_integer(1+6+1)
+        if params_servoj[0] == 0:
+          send_out("Received no parameters for movej message")
+        end
+
+        # Unpacks the parameters
+        waypoint_id = params_servoj[1]
+        q = [params_servoj[2] / MULT_jointstate,
+                   params_servoj[3] / MULT_jointstate,
+                   params_servoj[4] / MULT_jointstate,
+                   params_servoj[5] / MULT_jointstate,
+                   params_servoj[6] / MULT_jointstate,
+                   params_servoj[7] / MULT_jointstate]
+        t = params_servoj[8] / MULT_time
+
+        # Servos
+        #servoj(q, 3, 0.1, t)
+        #send_waypoint_finished(waypoint_id)
+        set_servo_setpoint(waypoint_id, q, t)
+      elif mtype == MSG_SET_PAYLOAD:
+        params = socket_read_binary_integer(1)
+        if params[0] == 0:
+          send_out("Received no parameters for setPayload message")
+        end
+
+        payload = params[1] / MULT_payload
+        #send_out(payload)
+        send_out("Received new payload")
+        set_payload(payload)
+#################################################################
+    #  elif mtype == MSG_get_torques:
+     #   send_out("Received request for getting torques")
+     #   rq_get_torques()
+     #   send_out("Torques was sent!")
+#################################################################
+      elif mtype == MSG_STOPJ:
+        send_out("Received stopj")
+        stopj(1.0)
+      elif mtype == MSG_SET_DIGITAL_OUT:
+        #send_out("Received Digital Out Signal")
+        # Reads the parameters
+        params_sdo = socket_read_binary_integer(2)
+        if params_sdo[0] == 0:
+          send_out("Received no parameters for set_digital_out message")
+        end
+        if params_sdo[2] > 0:
+           set_digital_out(params_sdo[1], True)
+        elif params_sdo[2] == 0:
+          set_digital_out(params_sdo[1], False)
+        end
+      elif mtype == MSG_SET_FLAG:
+        #send_out("Received Set Flag Signal")
+        # Reads the parameters
+        params_sf = socket_read_binary_integer(2)
+        if params_sf[0] == 0:
+          send_out("Received no parameters for set_flag message")
+        end
+        if params_sf[2] != 0:
+          set_flag(params_sf[1], True)
+        elif params_sf[2] == 0:
+          set_flag(params_sf[1], False)
+        end
+      elif mtype == MSG_SET_ANALOG_OUT:
+        #send_out("Received Analog Out Signal")
+        # Reads the parameters
+        params_sao = socket_read_binary_integer(2)
+        if params_sao[0] == 0:
+          send_out("Received no parameters for set_analog_out message")
+        end
+        set_analog_out(params_sao[1], (params_sao[2] / MULT_analog))
+      elif mtype == MSG_SET_TOOL_VOLTAGE:
+        #send_out("Received Tool Voltage Signal")
+        # Reads the parameters (also reads second dummy '0' integer)
+        params_stv = socket_read_binary_integer(2)
+        if params_stv[0] == 0:
+          send_out("Received no parameters for set_tool_voltage message")
+        end
+        set_tool_voltage(params_stv[1])
+      elif mtype == MSG_MOVEL:
+        send_out("Received MOVEL")
+        params_movel = socket_read_binary_integer(7)
+        if params_movel[0] == 0:
+          send_out("Received no parameters for set_digital_out message")
+        end
+        movel_vel = params_movel[1] / MULT_jointstate
+        goal = p[params_movel[2] / MULT_jointstate, params_movel[3] / MULT_jointstate, params_movel[4] / MULT_jointstate, params_movel[5] / MULT_jointstate, params_movel[6] / MULT_jointstate, params_movel[7] / MULT_jointstate]
+        send_out(goal)
+        textmsg("MOVEL pose = ", goal)
+        movel(goal, a=1.2, v=movel_vel, t=0, r=0)
+        send_out("Finished MOVEL")
+        send_waypoint_finished(424)
+
+      elif mtype == MSG_GRIPPER_ACT:
+        send_out("Received GRIPPER_ACT")
+        rq_init_connection()
+        rq_activate_and_wait()
+        send_out("Finished GRIPPER_ACT")
+
+      elif mtype == MSG_GRIPPER_MOVE:
+        send_out("Received GRIPPER_MOVE")
+        params = socket_read_binary_integer(3)
+        if get_list_length(params) == 4:
+            if params[0] == 3:
+                rq_set_force(params[2])
+                rq_set_speed(params[3])
+                rq_move_and_wait(params[1])
+                send_out("Finished GRIPPER_MOVE")
+            end
+        else:
+            send_out("Failed GRIPPER_MOVE")
+        end
+
+        if rq_is_object_detected():
+            socket_send_int(MSG_GRIPPER_OBJ_DETECTED)
+        end
+        socket_send_int(MSG_GRIPPER_MOVE_FINISHED)
+
+      elif mtype == MSG_GRIPPER_MOVE_COMPENSATION:
+        send_out("Received GRIPPER_MOVE_COMPENSATION")
+        params = socket_read_binary_integer(3)
+        if get_list_length(params) == 4:
+            if params[0] == 3:
+                rq_set_force(params[2])
+                rq_set_speed(params[3])
+                #force_mode(p[0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [0, 0, 1, 0, 0, 0], [0, 0, -15, 0, 0, 0], 2, [0.005, 0.005, 0.024, 0.01745, 0.01745, 0.01745])
+                force_mode(tool_pose(), [1, 0, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0], 2, [0.024, 0.005, 0.024, 0.01745, 0.01745, 0.01745])
+                rq_move_and_wait(params[1])
+                end_force_mode()
+                send_out("Finished GRIPPER_MOVE")
+            end
+        else:
+            send_out("Failed GRIPPER_MOVE")
+        end
+
+        if rq_is_object_detected():
+            socket_send_int(MSG_GRIPPER_OBJ_DETECTED)
+        end
+        socket_send_int(MSG_GRIPPER_MOVE_FINISHED)
+
+      else:
+        send_out("Received unknown message type")
+      end
+    end
+  end
+
+  socket_send_int(MSG_QUIT)
+end

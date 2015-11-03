@@ -1,0 +1,7 @@
+
+$ cd catkin_ws
+$ catkin_make ur_msgs_generate_messages
+$ cd /home/longfei/catkin_ws/src/universal_robot/ur_driver/src/ur_driver
+$ sudo chmod 774 driver.py
+$ cd catkin_ws/src/universal_robot/ur_driver/cfg
+$ chmod 777 URDriver.cfg
