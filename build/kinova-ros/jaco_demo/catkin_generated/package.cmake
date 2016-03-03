@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "jaco_demo")
+set(jaco_demo_MAINTAINER "Ilia Baranov (Clearpath) <ibaranov@clearpathrobotics.com>")
+set(jaco_demo_DEPRECATED "")
+set(jaco_demo_VERSION "0.0.1")
+set(jaco_demo_BUILD_DEPENDS "jaco_driver" "jaco_msgs" "std_msgs" "geometry_msgs" "roscpp" "rospy")
+set(jaco_demo_RUN_DEPENDS "jaco_driver" "jaco_msgs" "std_msgs" "geometry_msgs" "roscpp" "rospy")
+set(jaco_demo_BUILDTOOL_DEPENDS "catkin")

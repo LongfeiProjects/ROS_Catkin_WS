@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/longfei/catkin_ws/src/learning_actionlib/src/fibonacci_client.cpp
+ros/ros.h
+-
+actionlib/client/simple_action_client.h
+-
+actionlib/client/terminal_state.h
+-
+learning_actionlib/FibonacciAction.h
+-
+

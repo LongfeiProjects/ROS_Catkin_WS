@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "youbot_description")
+set(youbot_description_MAINTAINER "Walter Nowak <rick.candell@nist.gov>")
+set(youbot_description_DEPRECATED "")
+set(youbot_description_VERSION "0.8.0")
+set(youbot_description_BUILD_DEPENDS )
+set(youbot_description_RUN_DEPENDS )
+set(youbot_description_BUILDTOOL_DEPENDS "catkin")

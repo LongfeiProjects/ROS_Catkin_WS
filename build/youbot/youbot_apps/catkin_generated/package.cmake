@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "youbot_apps")
+set(youbot_apps_MAINTAINER "rick <rick@todo.todo>")
+set(youbot_apps_DEPRECATED "")
+set(youbot_apps_VERSION "0.0.0")
+set(youbot_apps_BUILD_DEPENDS "youbot_moveit")
+set(youbot_apps_RUN_DEPENDS "youbot_moveit")
+set(youbot_apps_BUILDTOOL_DEPENDS "catkin")

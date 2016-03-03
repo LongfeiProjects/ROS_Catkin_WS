@@ -1,0 +1,8 @@
+prefix=/home/longfei/catkin_ws/devel
+
+Name: twoarm_cage
+Description: Description of twoarm_cage
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/longfei/catkin_ws/devel/lib 
+Requires: 

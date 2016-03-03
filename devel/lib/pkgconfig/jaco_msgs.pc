@@ -1,0 +1,8 @@
+prefix=/home/longfei/catkin_ws/devel
+
+Name: jaco_msgs
+Description: Description of jaco_msgs
+Version: 0.0.1
+Cflags: -I/home/longfei/catkin_ws/devel/include
+Libs: -L/home/longfei/catkin_ws/devel/lib 
+Requires: actionlib_msgs geometry_msgs message_runtime

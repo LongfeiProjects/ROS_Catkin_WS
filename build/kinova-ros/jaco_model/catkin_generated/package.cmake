@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "jaco_model")
+set(jaco_model_MAINTAINER "Ilia Baranov (Clearpath) <ibaranov@clearpathrobotics.com>")
+set(jaco_model_DEPRECATED "")
+set(jaco_model_VERSION "0.0.1")
+set(jaco_model_BUILD_DEPENDS "urdf" "xacro")
+set(jaco_model_RUN_DEPENDS "urdf" "xacro")
+set(jaco_model_BUILDTOOL_DEPENDS "catkin")

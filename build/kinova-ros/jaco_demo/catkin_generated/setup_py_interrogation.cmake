@@ -1,0 +1,6 @@
+set(jaco_demo_SETUP_PY_VERSION "0.0.1")
+set(jaco_demo_SETUP_PY_SCRIPTS "")
+set(jaco_demo_SETUP_PY_PACKAGES "jaco_demo")
+set(jaco_demo_SETUP_PY_PACKAGE_DIRS "nodes/jaco_demo")
+set(jaco_demo_SETUP_PY_MODULES "")
+set(jaco_demo_SETUP_PY_MODULE_DIRS "")

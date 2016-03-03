@@ -1,0 +1,8 @@
+prefix=/home/longfei/catkin_ws/install
+
+Name: youbot_modbus_server
+Description: Description of youbot_modbus_server
+Version: 0.0.1
+Cflags: -I/home/longfei/catkin_ws/install/include
+Libs: -L/home/longfei/catkin_ws/install/lib 
+Requires: 

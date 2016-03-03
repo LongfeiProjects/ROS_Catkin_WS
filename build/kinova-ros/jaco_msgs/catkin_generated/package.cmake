@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "jaco_msgs")
+set(jaco_msgs_MAINTAINER "Ilia Baranov (Clearpath) <ibaranov@clearpathrobotics.com>")
+set(jaco_msgs_DEPRECATED "")
+set(jaco_msgs_VERSION "0.0.1")
+set(jaco_msgs_BUILD_DEPENDS "message_generation" "actionlib" "actionlib_msgs" "geometry_msgs")
+set(jaco_msgs_RUN_DEPENDS "message_runtime" "actionlib" "actionlib_msgs" "geometry_msgs")
+set(jaco_msgs_BUILDTOOL_DEPENDS "catkin")

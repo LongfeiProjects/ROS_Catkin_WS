@@ -1,0 +1,8 @@
+prefix=/home/longfei/catkin_ws/devel
+
+Name: youbot_msgs
+Description: Description of youbot_msgs
+Version: 0.1.0
+Cflags: -I/home/longfei/catkin_ws/devel/include
+Libs: -L/home/longfei/catkin_ws/devel/lib 
+Requires: 

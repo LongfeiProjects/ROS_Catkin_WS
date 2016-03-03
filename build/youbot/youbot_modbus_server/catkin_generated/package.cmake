@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "youbot_modbus_server")
+set(youbot_modbus_server_MAINTAINER "Timothy Zimmerman <timothy.zimmerman@nist.gov>")
+set(youbot_modbus_server_DEPRECATED "")
+set(youbot_modbus_server_VERSION "0.0.1")
+set(youbot_modbus_server_BUILD_DEPENDS "rospy" "std_msgs" "message_generation")
+set(youbot_modbus_server_RUN_DEPENDS "rospy" "std_msgs" "message_runtime")
+set(youbot_modbus_server_BUILDTOOL_DEPENDS "catkin")

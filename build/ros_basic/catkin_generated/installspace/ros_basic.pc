@@ -1,0 +1,8 @@
+prefix=/home/longfei/catkin_ws/install
+
+Name: ros_basic
+Description: Description of ros_basic
+Version: 0.0.0
+Cflags: -I/home/longfei/catkin_ws/install/include
+Libs: -L/home/longfei/catkin_ws/install/lib 
+Requires: 

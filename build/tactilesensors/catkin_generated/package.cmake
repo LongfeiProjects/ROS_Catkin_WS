@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "tactilesensors")
+set(tactilesensors_MAINTAINER "jproberge <jean-philippe.roberge@etsmtl.ca>")
+set(tactilesensors_DEPRECATED "")
+set(tactilesensors_VERSION "1.1.0")
+set(tactilesensors_BUILD_DEPENDS "message_generation")
+set(tactilesensors_RUN_DEPENDS "message_runtime")
+set(tactilesensors_BUILDTOOL_DEPENDS "catkin")

@@ -1,0 +1,10 @@
+<launch>
+
+  <!-- ros_args.launch -->
+  <arg name="foo" default="true" />
+  <arg name="bar" />
+  <arg name="baz" default="false" />
+  <arg name="nop"/>
+  <arg name="fix" value="true"/>
+
+</launch>

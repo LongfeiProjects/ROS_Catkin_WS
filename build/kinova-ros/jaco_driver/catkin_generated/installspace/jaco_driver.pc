@@ -1,0 +1,8 @@
+prefix=/home/longfei/catkin_ws/install
+
+Name: jaco_driver
+Description: Description of jaco_driver
+Version: 0.0.1
+Cflags: -I/home/longfei/catkin_ws/install/include
+Libs: -L/home/longfei/catkin_ws/install/lib 
+Requires: actionlib actionlib_msgs geometry_msgs jaco_msgs roscpp rospy sensor_msgs std_msgs tf

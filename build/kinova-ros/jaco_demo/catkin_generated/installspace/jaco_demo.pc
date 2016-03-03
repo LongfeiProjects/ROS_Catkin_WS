@@ -1,0 +1,8 @@
+prefix=/home/longfei/catkin_ws/install
+
+Name: jaco_demo
+Description: Description of jaco_demo
+Version: 0.0.1
+Cflags: 
+Libs: -L/home/longfei/catkin_ws/install/lib 
+Requires: jaco_driver jaco_msgs roscpp rospy std_msgs geometry_msgs

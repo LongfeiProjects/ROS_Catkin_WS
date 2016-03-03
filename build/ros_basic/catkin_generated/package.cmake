@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "ros_basic")
+set(ros_basic_MAINTAINER "longfei <longfei@todo.todo>")
+set(ros_basic_DEPRECATED "")
+set(ros_basic_VERSION "0.0.0")
+set(ros_basic_BUILD_DEPENDS "roscpp" "rospy" "std_msgs")
+set(ros_basic_RUN_DEPENDS "roscpp" "rospy" "std_msgs")
+set(ros_basic_BUILDTOOL_DEPENDS "catkin")

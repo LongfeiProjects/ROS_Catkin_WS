@@ -1,0 +1,8 @@
+prefix=/home/longfei/catkin_ws/devel
+
+Name: tactilesensors
+Description: Description of tactilesensors
+Version: 1.1.0
+Cflags: -I/home/longfei/catkin_ws/devel/include
+Libs: -L/home/longfei/catkin_ws/devel/lib 
+Requires: message_runtime
