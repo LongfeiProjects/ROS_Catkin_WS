@@ -197,8 +197,14 @@ DOXYGEN_EXECUTABLE:FILEPATH=/usr/bin/doxygen
 //Doxygen found
 DOXYGEN_FOUND:BOOL=TRUE
 
+//Path to a file.
+EIGEN_INCLUDE_DIR:PATH=/usr/include/eigen3
+
 //Path to a program.
 EMPY_EXECUTABLE:FILEPATH=/usr/bin/empy
+
+//The directory containing a CMake configuration file for Eigen.
+Eigen_DIR:PATH=/opt/ros/hydro/share/eigen/cmake
 
 //Path to a file.
 GTEST_INCLUDE_DIR:PATH=/usr/include
@@ -223,6 +229,9 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python
@@ -260,6 +269,18 @@ actionlib_DIR:PATH=/opt/ros/hydro/share/actionlib/cmake
 //The directory containing a CMake configuration file for actionlib_msgs.
 actionlib_msgs_DIR:PATH=/opt/ros/hydro/share/actionlib_msgs/cmake
 
+//The directory containing a CMake configuration file for angles.
+angles_DIR:PATH=/opt/ros/hydro/share/angles/cmake
+
+//The directory containing a CMake configuration file for bond.
+bond_DIR:PATH=/opt/ros/hydro/share/bond/cmake
+
+//The directory containing a CMake configuration file for bondcpp.
+bondcpp_DIR:PATH=/opt/ros/hydro/share/bondcpp/cmake
+
+//The directory containing a CMake configuration file for camera_info_manager.
+camera_info_manager_DIR:PATH=/opt/ros/hydro/share/camera_info_manager/cmake
+
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/hydro/share/catkin/cmake
 
@@ -271,6 +292,18 @@ control_msgs_DIR:PATH=/opt/ros/hydro/share/control_msgs/cmake
 
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/hydro/share/cpp_common/cmake
+
+//The directory containing a CMake configuration file for cv_bridge.
+cv_bridge_DIR:PATH=/opt/ros/hydro/share/cv_bridge/cmake
+
+//The directory containing a CMake configuration file for diagnostic_msgs.
+diagnostic_msgs_DIR:PATH=/opt/ros/hydro/share/diagnostic_msgs/cmake
+
+//The directory containing a CMake configuration file for diagnostic_updater.
+diagnostic_updater_DIR:PATH=/opt/ros/hydro/share/diagnostic_updater/cmake
+
+//The directory containing a CMake configuration file for driver_base.
+driver_base_DIR:PATH=/opt/ros/hydro/share/driver_base/cmake
 
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/hydro/share/dynamic_reconfigure/cmake
@@ -293,6 +326,12 @@ ethercat_soem_LIB_DEPENDS:STATIC=general;pthread;general;rt;
 //Value Computed by CMake
 ethercat_soem_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/ethercat-soem
 
+//The directory containing a CMake configuration file for gazebo_msgs.
+gazebo_msgs_DIR:PATH=/opt/ros/hydro/share/gazebo_msgs/cmake
+
+//The directory containing a CMake configuration file for gazebo_plugins.
+gazebo_plugins_DIR:PATH=/opt/ros/hydro/share/gazebo_plugins/cmake
+
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/hydro/share/gencpp/cmake
 
@@ -310,6 +349,12 @@ geometric_shapes_DIR:PATH=/opt/ros/hydro/share/geometric_shapes/cmake
 
 //The directory containing a CMake configuration file for geometry_msgs.
 geometry_msgs_DIR:PATH=/opt/ros/hydro/share/geometry_msgs/cmake
+
+//Value Computed by CMake
+grasping_pi_robot_moveit_config_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx2/grasping_pi_robot_moveit_config
+
+//Value Computed by CMake
+grasping_pi_robot_moveit_config_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx2/grasping_pi_robot_moveit_config
 
 //Value Computed by CMake
 gtest_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/gtest
@@ -336,8 +381,44 @@ gtest_force_shared_crt:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
+//The directory containing a CMake configuration file for hardware_interface.
+hardware_interface_DIR:PATH=/opt/ros/hydro/share/hardware_interface/cmake
+
+//The directory containing a CMake configuration file for household_objects_database_msgs.
+household_objects_database_msgs_DIR:PATH=/opt/ros/hydro/share/household_objects_database_msgs/cmake
+
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/hydro/share/image_transport/cmake
+
+//Value Computed by CMake
+jaco_demo_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/kinova-ros/jaco_demo
+
+//Value Computed by CMake
+jaco_demo_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/kinova-ros/jaco_demo
+
+//Value Computed by CMake
+jaco_driver_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/kinova-ros/jaco_driver
+
+//The directory containing a CMake configuration file for jaco_driver.
+jaco_driver_DIR:PATH=/home/longfei/catkin_ws/devel/share/jaco_driver/cmake
+
+//Value Computed by CMake
+jaco_driver_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/kinova-ros/jaco_driver
+
+//Value Computed by CMake
+jaco_model_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/kinova-ros/jaco_model
+
+//Value Computed by CMake
+jaco_model_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/kinova-ros/jaco_model
+
+//Value Computed by CMake
+jaco_msgs_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/kinova-ros/jaco_msgs
+
+//The directory containing a CMake configuration file for jaco_msgs.
+jaco_msgs_DIR:PATH=/home/longfei/catkin_ws/devel/share/jaco_msgs/cmake
+
+//Value Computed by CMake
+jaco_msgs_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/kinova-ros/jaco_msgs
 
 //The directory containing a CMake configuration file for kdl_conversions.
 kdl_conversions_DIR:PATH=/opt/ros/hydro/share/kdl_conversions/cmake
@@ -345,8 +426,23 @@ kdl_conversions_DIR:PATH=/opt/ros/hydro/share/kdl_conversions/cmake
 //The directory containing a CMake configuration file for kdl_parser.
 kdl_parser_DIR:PATH=/opt/ros/hydro/share/kdl_parser/cmake
 
+//Value Computed by CMake
+learning_actionlib_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/learning_actionlib
+
+//Value Computed by CMake
+learning_actionlib_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/learning_actionlib
+
+//Value Computed by CMake
+learning_tf_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/learning_tf
+
+//Value Computed by CMake
+learning_tf_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/learning_tf
+
 //Path to a library.
-lib:FILEPATH=/opt/ros/hydro/lib/libtf2.so
+lib:FILEPATH=/usr/lib/i386-linux-gnu/libpthread.so
+
+//The directory containing a CMake configuration file for manipulation_msgs.
+manipulation_msgs_DIR:PATH=/opt/ros/hydro/share/manipulation_msgs/cmake
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/hydro/share/message_filters/cmake
@@ -369,17 +465,218 @@ moveit_ros_perception_DIR:PATH=/opt/ros/hydro/share/moveit_ros_perception/cmake
 //The directory containing a CMake configuration file for moveit_ros_planning.
 moveit_ros_planning_DIR:PATH=/opt/ros/hydro/share/moveit_ros_planning/cmake
 
+//The directory containing a CMake configuration file for nav_msgs.
+nav_msgs_DIR:PATH=/opt/ros/hydro/share/nav_msgs/cmake
+
+//The directory containing a CMake configuration file for nodelet.
+nodelet_DIR:PATH=/opt/ros/hydro/share/nodelet/cmake
+
 //The directory containing a CMake configuration file for object_recognition_msgs.
 object_recognition_msgs_DIR:PATH=/opt/ros/hydro/share/object_recognition_msgs/cmake
 
 //The directory containing a CMake configuration file for octomap_msgs.
 octomap_msgs_DIR:PATH=/opt/ros/hydro/share/octomap_msgs/cmake
 
+//The directory containing a CMake configuration file for pcl_conversions.
+pcl_conversions_DIR:PATH=/opt/ros/hydro/share/pcl_conversions/cmake
+
+//The directory containing a CMake configuration file for pcl_msgs.
+pcl_msgs_DIR:PATH=/opt/ros/hydro/share/pcl_msgs/cmake
+
+//Value Computed by CMake
+pedestal_pi_no_gripper_moveit_config_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx2/pedestal_pi_no_gripper_moveit_config
+
+//Value Computed by CMake
+pedestal_pi_no_gripper_moveit_config_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx2/pedestal_pi_no_gripper_moveit_config
+
+//Value Computed by CMake
+pedestal_pi_with_gripper_moveit_config_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx2/pedestal_pi_with_gripper_moveit_config
+
+//Value Computed by CMake
+pedestal_pi_with_gripper_moveit_config_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx2/pedestal_pi_with_gripper_moveit_config
+
+//Value Computed by CMake
+pi_robot_moveit_config_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx2/pi_robot_moveit_config
+
+//Value Computed by CMake
+pi_robot_moveit_config_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx2/pi_robot_moveit_config
+
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/hydro/share/pluginlib/cmake
 
+//The directory containing a CMake configuration file for polled_camera.
+polled_camera_DIR:PATH=/opt/ros/hydro/share/polled_camera/cmake
+
+//Value Computed by CMake
+pr2_controller_configuration_gazebo_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/pr2_simulator/pr2_controller_configuration_gazebo
+
+//Value Computed by CMake
+pr2_controller_configuration_gazebo_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/pr2_simulator/pr2_controller_configuration_gazebo
+
+//The directory containing a CMake configuration file for pr2_controller_manager.
+pr2_controller_manager_DIR:PATH=pr2_controller_manager_DIR-NOTFOUND
+
+//Value Computed by CMake
+pr2_gazebo_plugins_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/pr2_simulator/pr2_gazebo_plugins
+
+//Value Computed by CMake
+pr2_gazebo_plugins_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/pr2_simulator/pr2_gazebo_plugins
+
+//The directory containing a CMake configuration file for pr2_hardware_interface.
+pr2_hardware_interface_DIR:PATH=/opt/ros/hydro/share/pr2_hardware_interface/cmake
+
+//The directory containing a CMake configuration file for pr2_mechanism_model.
+pr2_mechanism_model_DIR:PATH=/opt/ros/hydro/share/pr2_mechanism_model/cmake
+
+//The directory containing a CMake configuration file for pr2_msgs.
+pr2_msgs_DIR:PATH=pr2_msgs_DIR-NOTFOUND
+
+//Value Computed by CMake
+pr2_simulator_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/pr2_simulator/pr2_simulator
+
+//Value Computed by CMake
+pr2_simulator_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/pr2_simulator/pr2_simulator
+
+//Value Computed by CMake
+r2d2_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/r2d2
+
+//Value Computed by CMake
+r2d2_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/r2d2
+
 //The directory containing a CMake configuration file for random_numbers.
 random_numbers_DIR:PATH=/opt/ros/hydro/share/random_numbers/cmake
+
+//Value Computed by CMake
+rbx1_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx1/rbx1
+
+//Value Computed by CMake
+rbx1_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx1/rbx1
+
+//Value Computed by CMake
+rbx1_apps_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx1/rbx1_apps
+
+//Value Computed by CMake
+rbx1_apps_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx1/rbx1_apps
+
+//Value Computed by CMake
+rbx1_bringup_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx1/rbx1_bringup
+
+//Value Computed by CMake
+rbx1_bringup_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx1/rbx1_bringup
+
+//Value Computed by CMake
+rbx1_description_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx1/rbx1_description
+
+//Value Computed by CMake
+rbx1_description_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx1/rbx1_description
+
+//Value Computed by CMake
+rbx1_dynamixels_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx1/rbx1_dynamixels
+
+//Value Computed by CMake
+rbx1_dynamixels_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx1/rbx1_dynamixels
+
+//Value Computed by CMake
+rbx1_nav_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx1/rbx1_nav
+
+//Value Computed by CMake
+rbx1_nav_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx1/rbx1_nav
+
+//Value Computed by CMake
+rbx1_speech_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx1/rbx1_speech
+
+//Value Computed by CMake
+rbx1_speech_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx1/rbx1_speech
+
+//Value Computed by CMake
+rbx1_vision_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx1/rbx1_vision
+
+//Value Computed by CMake
+rbx1_vision_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx1/rbx1_vision
+
+//Value Computed by CMake
+rbx2_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx2/rbx2
+
+//Value Computed by CMake
+rbx2_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx2/rbx2
+
+//Value Computed by CMake
+rbx2_ar_tags_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx2/rbx2_ar_tags
+
+//Value Computed by CMake
+rbx2_ar_tags_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx2/rbx2_ar_tags
+
+//Value Computed by CMake
+rbx2_arm_nav_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx2/rbx2_arm_nav
+
+//Value Computed by CMake
+rbx2_arm_nav_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx2/rbx2_arm_nav
+
+//Value Computed by CMake
+rbx2_bringup_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx2/rbx2_bringup
+
+//Value Computed by CMake
+rbx2_bringup_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx2/rbx2_bringup
+
+//Value Computed by CMake
+rbx2_description_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx2/rbx2_description
+
+//Value Computed by CMake
+rbx2_description_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx2/rbx2_description
+
+//Value Computed by CMake
+rbx2_diagnostics_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx2/rbx2_diagnostics
+
+//Value Computed by CMake
+rbx2_diagnostics_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx2/rbx2_diagnostics
+
+//Value Computed by CMake
+rbx2_dynamixels_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx2/rbx2_dynamixels
+
+//Value Computed by CMake
+rbx2_dynamixels_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx2/rbx2_dynamixels
+
+//Value Computed by CMake
+rbx2_gazebo_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx2/rbx2_gazebo
+
+//Value Computed by CMake
+rbx2_gazebo_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx2/rbx2_gazebo
+
+//Value Computed by CMake
+rbx2_gui_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx2/rbx2_gui
+
+//Value Computed by CMake
+rbx2_gui_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx2/rbx2_gui
+
+//Value Computed by CMake
+rbx2_msgs_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx2/rbx2_msgs
+
+//Value Computed by CMake
+rbx2_msgs_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx2/rbx2_msgs
+
+//Value Computed by CMake
+rbx2_nav_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx2/rbx2_nav
+
+//Value Computed by CMake
+rbx2_nav_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx2/rbx2_nav
+
+//Value Computed by CMake
+rbx2_tasks_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx2/rbx2_tasks
+
+//Value Computed by CMake
+rbx2_tasks_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx2/rbx2_tasks
+
+//Value Computed by CMake
+rbx2_utils_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx2/rbx2_utils
+
+//Value Computed by CMake
+rbx2_utils_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx2/rbx2_utils
+
+//Value Computed by CMake
+rbx2_vision_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/rbx2/rbx2_vision
+
+//Value Computed by CMake
+rbx2_vision_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/rbx2/rbx2_vision
 
 //Dependencies for the target
 roboticArm_LIB_DEPENDS:STATIC=general;/opt/ros/hydro/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/hydro/lib/libtf.so;general;/opt/ros/hydro/lib/libtf2_ros.so;general;/opt/ros/hydro/lib/libactionlib.so;general;/opt/ros/hydro/lib/libmessage_filters.so;general;/opt/ros/hydro/lib/libroscpp.so;general;/usr/lib/libboost_signals-mt.so;general;/usr/lib/libboost_filesystem-mt.so;general;/opt/ros/hydro/lib/libxmlrpcpp.so;general;/opt/ros/hydro/lib/libtf2.so;general;/opt/ros/hydro/lib/librosconsole.so;general;/opt/ros/hydro/lib/librosconsole_log4cxx.so;general;/opt/ros/hydro/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/libboost_regex-mt.so;general;/opt/ros/hydro/lib/libroscpp_serialization.so;general;/opt/ros/hydro/lib/librostime.so;general;/usr/lib/libboost_date_time-mt.so;general;/usr/lib/libboost_system-mt.so;general;/usr/lib/libboost_thread-mt.so;general;/usr/lib/i386-linux-gnu/libpthread.so;general;/opt/ros/hydro/lib/libcpp_common.so;general;/opt/ros/hydro/lib/libconsole_bridge.so;
@@ -453,6 +750,12 @@ robotiq_s_model_visualization_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/ro
 //Value Computed by CMake
 robotiq_s_model_visualization_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/robotiq-hydro-devel/robotiq_s_model_visualization
 
+//Value Computed by CMake
+ros_basic_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/ros_basic
+
+//Value Computed by CMake
+ros_basic_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/ros_basic
+
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/hydro/share/rosconsole/cmake
 
@@ -492,11 +795,23 @@ shape_msgs_DIR:PATH=/opt/ros/hydro/share/shape_msgs/cmake
 //The directory containing a CMake configuration file for shape_tools.
 shape_tools_DIR:PATH=/opt/ros/hydro/share/shape_tools/cmake
 
+//The directory containing a CMake configuration file for smclib.
+smclib_DIR:PATH=/opt/ros/hydro/share/smclib/cmake
+
 //The directory containing a CMake configuration file for srdfdom.
 srdfdom_DIR:PATH=/opt/ros/hydro/share/srdfdom/cmake
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/hydro/share/std_msgs/cmake
+
+//The directory containing a CMake configuration file for std_srvs.
+std_srvs_DIR:PATH=/opt/ros/hydro/share/std_srvs/cmake
+
+//Value Computed by CMake
+tactilesensors_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/tactilesensors
+
+//Value Computed by CMake
+tactilesensors_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/tactilesensors
 
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/hydro/share/tf2/cmake
@@ -518,6 +833,15 @@ tf_conversions_DIR:PATH=/opt/ros/hydro/share/tf_conversions/cmake
 
 //The directory containing a CMake configuration file for trajectory_msgs.
 trajectory_msgs_DIR:PATH=/opt/ros/hydro/share/trajectory_msgs/cmake
+
+//The directory containing a CMake configuration file for turtlesim.
+turtlesim_DIR:PATH=/opt/ros/hydro/share/turtlesim/cmake
+
+//Value Computed by CMake
+twoarm_cage_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/youbot/twoarm_cage
+
+//Value Computed by CMake
+twoarm_cage_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/youbot/twoarm_cage
 
 //Value Computed by CMake
 universal_robot_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/universal_robot/universal_robot
@@ -593,6 +917,45 @@ urdf_DIR:PATH=/opt/ros/hydro/share/urdf/cmake
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/hydro/share/xmlrpcpp/cmake
+
+//Value Computed by CMake
+youbot_apps_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/youbot/youbot_apps
+
+//The directory containing a CMake configuration file for youbot_apps.
+youbot_apps_DIR:PATH=/home/longfei/catkin_ws/devel/share/youbot_apps/cmake
+
+//Value Computed by CMake
+youbot_apps_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/youbot/youbot_apps
+
+//Value Computed by CMake
+youbot_description_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/youbot/youbot_description
+
+//Value Computed by CMake
+youbot_description_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/youbot/youbot_description
+
+//Value Computed by CMake
+youbot_modbus_server_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/youbot/youbot_modbus_server
+
+//Value Computed by CMake
+youbot_modbus_server_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/youbot/youbot_modbus_server
+
+//Value Computed by CMake
+youbot_moveit_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/youbot/youbot_moveit
+
+//The directory containing a CMake configuration file for youbot_moveit.
+youbot_moveit_DIR:PATH=/home/longfei/catkin_ws/devel/share/youbot_moveit/cmake
+
+//Value Computed by CMake
+youbot_moveit_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/youbot/youbot_moveit
+
+//Value Computed by CMake
+youbot_msgs_BINARY_DIR:STATIC=/home/longfei/catkin_ws/build/youbot/youbot_msgs
+
+//The directory containing a CMake configuration file for youbot_msgs.
+youbot_msgs_DIR:PATH=/home/longfei/catkin_ws/devel/share/youbot_msgs/cmake
+
+//Value Computed by CMake
+youbot_msgs_SOURCE_DIR:STATIC=/home/longfei/catkin_ws/src/youbot/youbot_msgs
 
 
 ########################
@@ -716,7 +1079,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=22
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=62
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -747,6 +1110,12 @@ CMAKE_UNAME:INTERNAL=/bin/uname
 CMAKE_USE_RELATIVE_PATHS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: EIGEN_INCLUDE_DIR
+EIGEN_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//Details about finding Eigen
+FIND_PACKAGE_MESSAGE_DETAILS_Eigen:INTERNAL=[/usr/include/eigen3][v()]
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.26()]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.3()]
 //Details about finding Threads
@@ -766,10 +1135,47 @@ GTEST_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 GTEST_MAIN_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GTEST_MAIN_LIBRARY_DEBUG
 GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+PC_EIGEN_CFLAGS:INTERNAL=-I/usr/include/eigen3
+PC_EIGEN_CFLAGS_I:INTERNAL=
+PC_EIGEN_CFLAGS_OTHER:INTERNAL=
+PC_EIGEN_FOUND:INTERNAL=1
+PC_EIGEN_INCLUDEDIR:INTERNAL=
+PC_EIGEN_INCLUDE_DIRS:INTERNAL=/usr/include/eigen3
+PC_EIGEN_LDFLAGS:INTERNAL=
+PC_EIGEN_LDFLAGS_OTHER:INTERNAL=
+PC_EIGEN_LIBDIR:INTERNAL=
+PC_EIGEN_LIBRARIES:INTERNAL=
+PC_EIGEN_LIBRARY_DIRS:INTERNAL=
+PC_EIGEN_LIBS:INTERNAL=
+PC_EIGEN_LIBS_L:INTERNAL=
+PC_EIGEN_LIBS_OTHER:INTERNAL=
+PC_EIGEN_LIBS_PATHS:INTERNAL=
+PC_EIGEN_PREFIX:INTERNAL=
+PC_EIGEN_STATIC_CFLAGS:INTERNAL=-I/usr/include/eigen3
+PC_EIGEN_STATIC_CFLAGS_I:INTERNAL=
+PC_EIGEN_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_EIGEN_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/eigen3
+PC_EIGEN_STATIC_LDFLAGS:INTERNAL=
+PC_EIGEN_STATIC_LDFLAGS_OTHER:INTERNAL=
+PC_EIGEN_STATIC_LIBDIR:INTERNAL=
+PC_EIGEN_STATIC_LIBRARIES:INTERNAL=
+PC_EIGEN_STATIC_LIBRARY_DIRS:INTERNAL=
+PC_EIGEN_STATIC_LIBS:INTERNAL=
+PC_EIGEN_STATIC_LIBS_L:INTERNAL=
+PC_EIGEN_STATIC_LIBS_OTHER:INTERNAL=
+PC_EIGEN_STATIC_LIBS_PATHS:INTERNAL=
+PC_EIGEN_VERSION:INTERNAL=3.0.5
+PC_EIGEN_eigen3_INCLUDEDIR:INTERNAL=
+PC_EIGEN_eigen3_LIBDIR:INTERNAL=
+PC_EIGEN_eigen3_PREFIX:INTERNAL=
+PC_EIGEN_eigen3_VERSION:INTERNAL=
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //This needs to be in PYTHONPATH when 'setup.py install' is called.
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
+__pkg_config_checked_PC_EIGEN:INTERNAL=1
 

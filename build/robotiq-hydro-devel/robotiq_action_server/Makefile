@@ -150,90 +150,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-.PHONY : robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_cpp: robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-.PHONY : actionlib_generate_messages_cpp
-
-# fast build rule for target.
-actionlib_generate_messages_cpp/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_generate_messages_cpp.dir/build
-.PHONY : actionlib_generate_messages_cpp/fast
-
-# Convenience name for target.
-robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-.PHONY : robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_lisp: robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-.PHONY : actionlib_generate_messages_lisp
-
-# fast build rule for target.
-actionlib_generate_messages_lisp/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_generate_messages_lisp.dir/build
-.PHONY : actionlib_generate_messages_lisp/fast
-
-# Convenience name for target.
-robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_generate_messages_py.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_generate_messages_py.dir/rule
-.PHONY : robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_generate_messages_py.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_py: robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_generate_messages_py.dir/rule
-.PHONY : actionlib_generate_messages_py
-
-# fast build rule for target.
-actionlib_generate_messages_py/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_generate_messages_py.dir/build.make robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_generate_messages_py.dir/build
-.PHONY : actionlib_generate_messages_py/fast
-
-# Convenience name for target.
-robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
-.PHONY : robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-actionlib_msgs_generate_messages_cpp: robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
-.PHONY : actionlib_msgs_generate_messages_cpp
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_cpp/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
-.PHONY : actionlib_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
-.PHONY : robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-actionlib_msgs_generate_messages_lisp: robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
-.PHONY : actionlib_msgs_generate_messages_lisp
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_lisp/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
-.PHONY : actionlib_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
-.PHONY : robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-actionlib_msgs_generate_messages_py: robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
-.PHONY : actionlib_msgs_generate_messages_py
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_py/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make robotiq-hydro-devel/robotiq_action_server/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
-.PHONY : actionlib_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 robotiq-hydro-devel/robotiq_action_server/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule:
 	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq-hydro-devel/robotiq_action_server/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule
 .PHONY : robotiq-hydro-devel/robotiq_action_server/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule
@@ -274,48 +190,6 @@ control_msgs_generate_messages_py: robotiq-hydro-devel/robotiq_action_server/CMa
 control_msgs_generate_messages_py/fast:
 	cd /home/longfei/catkin_ws/build && $(MAKE) -f robotiq-hydro-devel/robotiq_action_server/CMakeFiles/control_msgs_generate_messages_py.dir/build.make robotiq-hydro-devel/robotiq_action_server/CMakeFiles/control_msgs_generate_messages_py.dir/build
 .PHONY : control_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-robotiq-hydro-devel/robotiq_action_server/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq-hydro-devel/robotiq_action_server/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : robotiq-hydro-devel/robotiq_action_server/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_cpp: robotiq-hydro-devel/robotiq_action_server/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f robotiq-hydro-devel/robotiq_action_server/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make robotiq-hydro-devel/robotiq_action_server/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-robotiq-hydro-devel/robotiq_action_server/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq-hydro-devel/robotiq_action_server/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : robotiq-hydro-devel/robotiq_action_server/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_lisp: robotiq-hydro-devel/robotiq_action_server/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f robotiq-hydro-devel/robotiq_action_server/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make robotiq-hydro-devel/robotiq_action_server/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-robotiq-hydro-devel/robotiq_action_server/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq-hydro-devel/robotiq_action_server/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : robotiq-hydro-devel/robotiq_action_server/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: robotiq-hydro-devel/robotiq_action_server/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f robotiq-hydro-devel/robotiq_action_server/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make robotiq-hydro-devel/robotiq_action_server/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 robotiq-hydro-devel/robotiq_action_server/CMakeFiles/robotiq_action_server_client_test.dir/rule:
@@ -465,19 +339,10 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... actionlib_generate_messages_cpp"
-	@echo "... actionlib_generate_messages_lisp"
-	@echo "... actionlib_generate_messages_py"
-	@echo "... actionlib_msgs_generate_messages_cpp"
-	@echo "... actionlib_msgs_generate_messages_lisp"
-	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... control_msgs_generate_messages_cpp"
 	@echo "... control_msgs_generate_messages_lisp"
 	@echo "... control_msgs_generate_messages_py"
 	@echo "... edit_cache"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"

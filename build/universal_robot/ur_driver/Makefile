@@ -150,62 +150,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-.PHONY : universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_gencfg: universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-.PHONY : dynamic_reconfigure_gencfg
-
-# fast build rule for target.
-dynamic_reconfigure_gencfg/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
-.PHONY : dynamic_reconfigure_gencfg/fast
-
-# Convenience name for target.
-universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-.PHONY : universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_cpp: universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-.PHONY : dynamic_reconfigure_generate_messages_cpp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_cpp/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
-
-# Convenience name for target.
-universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-.PHONY : universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_lisp: universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-.PHONY : dynamic_reconfigure_generate_messages_lisp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_lisp/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
-
-# Convenience name for target.
-universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-.PHONY : universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_py: universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-.PHONY : dynamic_reconfigure_generate_messages_py
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_py/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make universal_robot/ur_driver/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_py/fast
-
-# Convenience name for target.
 universal_robot/ur_driver/CMakeFiles/move_get_torque_cpp.dir/rule:
 	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_driver/CMakeFiles/move_get_torque_cpp.dir/rule
 .PHONY : universal_robot/ur_driver/CMakeFiles/move_get_torque_cpp.dir/rule
@@ -234,48 +178,6 @@ roboticArm/fast:
 .PHONY : roboticArm/fast
 
 # Convenience name for target.
-universal_robot/ur_driver/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_driver/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : universal_robot/ur_driver/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: universal_robot/ur_driver/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f universal_robot/ur_driver/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make universal_robot/ur_driver/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-universal_robot/ur_driver/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_driver/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : universal_robot/ur_driver/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_lisp: universal_robot/ur_driver/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f universal_robot/ur_driver/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make universal_robot/ur_driver/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-universal_robot/ur_driver/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_driver/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : universal_robot/ur_driver/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_py: universal_robot/ur_driver/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f universal_robot/ur_driver/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make universal_robot/ur_driver/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 universal_robot/ur_driver/CMakeFiles/test_move_cpp.dir/rule:
 	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_driver/CMakeFiles/test_move_cpp.dir/rule
 .PHONY : universal_robot/ur_driver/CMakeFiles/test_move_cpp.dir/rule
@@ -302,90 +204,6 @@ test_pick_place_cpp: universal_robot/ur_driver/CMakeFiles/test_pick_place_cpp.di
 test_pick_place_cpp/fast:
 	cd /home/longfei/catkin_ws/build && $(MAKE) -f universal_robot/ur_driver/CMakeFiles/test_pick_place_cpp.dir/build.make universal_robot/ur_driver/CMakeFiles/test_pick_place_cpp.dir/build
 .PHONY : test_pick_place_cpp/fast
-
-# Convenience name for target.
-universal_robot/ur_driver/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_driver/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-.PHONY : universal_robot/ur_driver/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_cpp: universal_robot/ur_driver/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-.PHONY : tf2_msgs_generate_messages_cpp
-
-# fast build rule for target.
-tf2_msgs_generate_messages_cpp/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f universal_robot/ur_driver/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make universal_robot/ur_driver/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
-.PHONY : tf2_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-universal_robot/ur_driver/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_driver/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
-.PHONY : universal_robot/ur_driver/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_lisp: universal_robot/ur_driver/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
-.PHONY : tf2_msgs_generate_messages_lisp
-
-# fast build rule for target.
-tf2_msgs_generate_messages_lisp/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f universal_robot/ur_driver/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make universal_robot/ur_driver/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
-.PHONY : tf2_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-universal_robot/ur_driver/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_driver/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
-.PHONY : universal_robot/ur_driver/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_py: universal_robot/ur_driver/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
-.PHONY : tf2_msgs_generate_messages_py
-
-# fast build rule for target.
-tf2_msgs_generate_messages_py/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f universal_robot/ur_driver/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make universal_robot/ur_driver/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
-.PHONY : tf2_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-universal_robot/ur_driver/CMakeFiles/tf_generate_messages_cpp.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_driver/CMakeFiles/tf_generate_messages_cpp.dir/rule
-.PHONY : universal_robot/ur_driver/CMakeFiles/tf_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_cpp: universal_robot/ur_driver/CMakeFiles/tf_generate_messages_cpp.dir/rule
-.PHONY : tf_generate_messages_cpp
-
-# fast build rule for target.
-tf_generate_messages_cpp/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f universal_robot/ur_driver/CMakeFiles/tf_generate_messages_cpp.dir/build.make universal_robot/ur_driver/CMakeFiles/tf_generate_messages_cpp.dir/build
-.PHONY : tf_generate_messages_cpp/fast
-
-# Convenience name for target.
-universal_robot/ur_driver/CMakeFiles/tf_generate_messages_lisp.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_driver/CMakeFiles/tf_generate_messages_lisp.dir/rule
-.PHONY : universal_robot/ur_driver/CMakeFiles/tf_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_lisp: universal_robot/ur_driver/CMakeFiles/tf_generate_messages_lisp.dir/rule
-.PHONY : tf_generate_messages_lisp
-
-# fast build rule for target.
-tf_generate_messages_lisp/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f universal_robot/ur_driver/CMakeFiles/tf_generate_messages_lisp.dir/build.make universal_robot/ur_driver/CMakeFiles/tf_generate_messages_lisp.dir/build
-.PHONY : tf_generate_messages_lisp/fast
-
-# Convenience name for target.
-universal_robot/ur_driver/CMakeFiles/tf_generate_messages_py.dir/rule:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_driver/CMakeFiles/tf_generate_messages_py.dir/rule
-.PHONY : universal_robot/ur_driver/CMakeFiles/tf_generate_messages_py.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_py: universal_robot/ur_driver/CMakeFiles/tf_generate_messages_py.dir/rule
-.PHONY : tf_generate_messages_py
-
-# fast build rule for target.
-tf_generate_messages_py/fast:
-	cd /home/longfei/catkin_ws/build && $(MAKE) -f universal_robot/ur_driver/CMakeFiles/tf_generate_messages_py.dir/build.make universal_robot/ur_driver/CMakeFiles/tf_generate_messages_py.dir/build
-.PHONY : tf_generate_messages_py/fast
 
 # Convenience name for target.
 universal_robot/ur_driver/CMakeFiles/ur_driver_gencfg.dir/rule:
@@ -506,10 +324,6 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... dynamic_reconfigure_gencfg"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
-	@echo "... dynamic_reconfigure_generate_messages_lisp"
-	@echo "... dynamic_reconfigure_generate_messages_py"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
@@ -518,18 +332,9 @@ help:
 	@echo "... move_get_torque_cpp"
 	@echo "... rebuild_cache"
 	@echo "... roboticArm"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... test"
 	@echo "... test_move_cpp"
 	@echo "... test_pick_place_cpp"
-	@echo "... tf2_msgs_generate_messages_cpp"
-	@echo "... tf2_msgs_generate_messages_lisp"
-	@echo "... tf2_msgs_generate_messages_py"
-	@echo "... tf_generate_messages_cpp"
-	@echo "... tf_generate_messages_lisp"
-	@echo "... tf_generate_messages_py"
 	@echo "... ur_driver_gencfg"
 	@echo "... src/move_get_torque.o"
 	@echo "... src/move_get_torque.i"
